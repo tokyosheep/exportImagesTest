@@ -11,8 +11,10 @@ module.exports = {
         filename:"main.min.js"
     },
     externals:{
-        photoshop:"require('photoshop')",
-        uxp:"require('uxp')",
+      uxp: 'commonjs2 uxp',
+      photoshop: 'commonjs2 photoshop',
+      os: 'commonjs2 os',
+      fs: 'commonjs2 fs'
     },
     module:{
         rules:[

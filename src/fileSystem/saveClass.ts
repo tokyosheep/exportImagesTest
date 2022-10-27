@@ -51,4 +51,4 @@ export class SaveAsPSD extends SaveBase {
             }
         }, {commandName: 'save psd'});
     }
-}
+};

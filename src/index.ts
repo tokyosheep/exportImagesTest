@@ -1,10 +1,10 @@
 import { app } from 'photoshop';
 import os from 'os';
-import * as path from 'path-browserify';
+
 
 import { saveDocument } from './fileSystem/saves';
 
-
+import * as path from 'path-browserify';
 const desktopPath = `file:${os.homedir()}/Desktop`;// desktop path
 console.log(desktopPath);
 console.log(path.dirname(desktopPath));

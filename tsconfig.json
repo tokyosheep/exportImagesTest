@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "es5",
+      "module": "commonjs",
+      "strict":false,
+      /*2021年11月30日現在trueにできる程厳格な型データになっていない。*/
+      "moduleResolution": "node",
+      "baseUrl":"./",//ベースのディレクトリーを指定。
+      "paths": {//ダウンロードした型データを読み込むようにする。
+        "*": [
+          "types/*"
+        ]
+      }
+    }
+  }

@@ -18,7 +18,7 @@ export const moveFromInitFolder = async (init, destination) => {
     console.log(e);
   }
 };
-
+/*
 export const saveDocument:(savePath:string)=>Promise<void> = async (savePath) => {
     return await core.executeAsModal(async () => {
       try {
@@ -35,3 +35,4 @@ export const saveDocument:(savePath:string)=>Promise<void> = async (savePath) =>
       }
     }, {commandName: 'save'});
 };
+*/

@@ -6,6 +6,8 @@ import * as path from 'path-browserify';
 
 const uxpfs = uxp.storage.localFileSystem;
 
+const FILE_PROTOCOL = 'file:';
+
 export const setFileProtocol = filePath => `file:${filePath}`;
 export const desktopPath = `file:${os.homedir()}/Desktop`;
 
@@ -20,12 +22,14 @@ export const moveFromInitFolder = async (init, destination) => {
 export const saveDocument:(savePath:string)=>Promise<void> = async (savePath) => {
     return await core.executeAsModal(async () => {
       try {
+      const initPath = path.dirname(app.activeDocument.path);
+      const initName = path.basename(app.activeDocument.path ,path.extname(app.activeDocument.path));
       const temp = await uxpfs.getTemporaryFolder();
-      console.log(fs);
-      await app.activeDocument.saveAs.psd(temp, true);
-      console.log(`file:${temp.nativePath}${app.activeDocument.name}`);
-      console.log(`${desktopPath}/saa.jpg`);
-      await fs.rename(`file:${temp.nativePath}${app.activeDocument.name}`,  `${desktopPath}/saa.psd`);
+      await app.activeDocument.saveAs.psd(temp);
+      console.log(temp);
+      console.log(`${FILE_PROTOCOL}${temp.nativePath}${app.activeDocument.name}`);
+      console.log(initPath);
+      await fs.rename(`${FILE_PROTOCOL}${temp.nativePath}${app.activeDocument.name}`, `${FILE_PROTOCOL}${initPath}/${initName}.psd`);
       } catch (e) {
         console.log(e);
       }

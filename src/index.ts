@@ -1,7 +1,6 @@
 import { app } from 'photoshop';
 import os from 'os';
 
-
 import { saveDocument } from './fileSystem/saves';
 
 import * as path from 'path-browserify';
@@ -19,3 +18,9 @@ document.getElementById('savedoc').addEventListener('click', async () => {
     console.log(path.dirname(app.activeDocument.path));
     await saveDocument(`${path.dirname(app.activeDocument.path)}/abc.psd`);
 });
+
+document.getElementById("get_doc").addEventListener("click", async () => {
+    console.log('activedocument', app.activeDocument);
+    console.log(path.dirname(app.activeDocument.path));
+    console.log(path.basename(app.activeDocument.path ,path.extname(app.activeDocument.path)));
+})

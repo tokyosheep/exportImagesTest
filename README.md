@@ -25,3 +25,17 @@ firstly, run "npm install".
 then compile code through running "npm run dev" or "npm run watch".
 after compiling that, start plugin through UXP devtool.
 I confirm it works on Win and Mac both OS.
+
+environment variable "HASPROTOCOL" has boolean value.
+if it true, the string value "PROTOCOL" willl be added on head od any of file path,
+and in case of false, it won't be added.
+
+since UXP supported fs module, initially file protocol was necessary for filesystem.
+othereise, it won't work, but since updated UXP 7.0, it's not required anymore.
+if you need adptation for older versions, I recommend adding protocol.
+
+### manifest
+
+for now manifest version have to be 5 (probably in the future it'll be newer)
+declaring "localFileSystem", "fullAccess".
+Photoshop "minVersion" have to be later than "24.2".

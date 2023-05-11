@@ -216,7 +216,7 @@ export const writeTextFile = async () => {
     try {
         const dir = document.getElementById('dir').textContent;
         if(dir === '')throw new Error('no registered directory');
-        const filePath = path.join(setProtocol(dir), 'text');
+        const filePath = path.join(setProtocol(dir), 'text.txt');
         console.log(filePath);
         await fs.writeFile(filePath, 'hello from photoshop');
         await app.showAlert('saved text file');

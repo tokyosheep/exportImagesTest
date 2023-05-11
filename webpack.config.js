@@ -30,7 +30,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-          HASPROTOCOL: true
+          HASPROTOCOL: false
         })
       ]
 };

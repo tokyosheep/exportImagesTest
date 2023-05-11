@@ -1,16 +1,27 @@
-# Starter Photoshop Plugin (Vanilla)
+## Export images test
 
-This starter plugin is a good place to get started when developing for Photoshop. It does not rely on any frameworks or build steps -- hence the name "Vanilla".
+This is an exmaple of UXP Photoshop Plugin.
+UXP has its own filesystem. it's bit unique system. but for some users, It'S too unique I suppose.
 
-## Load into Photoshop
+### Node.js style filesystem and Entry object
 
-Make sure Photoshop is up and running first. First, add the plugin to the "Developer Workspace" in the UXP Developer Tools (UDT) application.
-  * If you selected "Create Plugin..." earlier, it will have already be there with the plugin ID and name you specified. 
-  * Otherwise, click "Add Plugin" and select the `manifest.json` file in the corresponding plugin folder.
+initially , UXP filesystem was strictly regulated for security reason.
+since UXP allowed to access local system, it supports Node style filesystem.
+but I suupose many people aren't familiar with Entry object.
+and UXP Node style file system isn't same as Node.js itself.
+so you'll be confused about defferences.
+this is the reason I published this example.
 
-Click the ••• button next to the corresponding workspace entry, and click "Load". Switch over to Photoshop, and the plugin's panel will be running. 
+### check the file system through the saving functions.
 
-## Continue creating
+this plugin has saving functions.
+like save on desktop or select folder through dialog ...etc
+you can see how's it work on UXP system specifically.
 
-* Read more about creating and debugging plugins using the UDT application [here](https://developer.adobe.com/photoshop/uxp/2022/guides/devtool/udt-walkthrough/). 
-* We build on this starter template and show you how to [edit a document](https://developer.adobe.com/photoshop/uxp/2022/guides/getting-started/editing-the-document/) and [write a file](https://developer.adobe.com/photoshop/uxp/2022/guides/getting-started/writing-a-file/) using UXP. 
+### How to use it.
+
+this plugin is developed on TypeScript and Webpack.
+firstly, run "npm install".
+then compile code through running "npm run dev" or "npm run watch".
+after compiling that, start plugin through UXP devtool.
+I confirm it works on Win and Mac both OS.

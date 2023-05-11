@@ -8,26 +8,32 @@
     color: white;
     padding: 0 16px;
   }
-  li:before {
-    content: '• ';
-    width: 3em;
+  .text {
+    display: block;
   }
 
-  #layers {
-    border: 1px solid #808080;
-    border-radius: 4px;
-    padding: 16px;
+  aside {
+    margin-top: 20px;
   }
 </style>
 <body>
-  <sp-heading>Layers</sp-heading>
-  <sp-body id="layers">
-    No layers
-  </sp-body>
-  <footer>
-    <sp-button id="btnPopulate">Populate Layers</sp-button>
-    <sp-button id="savedoc"> save doc</sp-button>
-    <sp-button id="get_doc">get doc</sp-button>
-  </footer>
+  <sp-heading>export images test</sp-heading>
+  <main>
+    <sp-action-button id="save_folder">save in folder</sp-action-button>
+    <sp-action-button id="save_doc"> save doc</sp-action-button>
+    <sp-action-button id="save_desktop">save desktop</sp-action-button>
+    <sp-action-button id="save_desktop_img">save desktop as img</sp-action-button>
+    <sp-action-button id="save_picker">save and select folder</sp-action-button>
+    <sp-action-button id="mkdir_picker">mkdir pick directory</sp-action-button>
+  </main>
+  <aside>
+    <sp-action-button id="writeText">save on dir registered</sp-action-button>
+    <sp-action-button id="register_directory">register dir</sp-action-button>
+    <span class="text" >directory</span>
+    <span class="text" id="dir"></span>
+  </aside>
+  <aside>
+    <sp-action-button id="call_desktop">call desktop path</sp-action-button>
+  </aside>
 </body>
 </html>

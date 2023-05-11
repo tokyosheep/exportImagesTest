@@ -1,5 +1,6 @@
 "use strict";
 const mode = "development";
+const webpack = require('webpack');
 
 module.exports = {
     mode:mode,
@@ -27,4 +28,9 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".json"],
     },
+    plugins: [
+        new webpack.DefinePlugin({
+          HASPROTOCOL: true
+        })
+      ]
 };

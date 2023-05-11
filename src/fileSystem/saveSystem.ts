@@ -103,6 +103,11 @@ const saveJpgWithEntry = async ({
     return new Promise((resolve, reject) => {
         core.executeAsModal(async () => {
             try {
+                /* 
+                    saveAs method requires Save Option class exactly(JPEGSaveOptions class)
+                    but just giving object following option's properties, it completely works well.
+                    Idk maybe still Photoshop types have some problems.
+                */
                 const option = {
                     quality: 12,
                     embedColorProfile: true,

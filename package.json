@@ -1,9 +1,8 @@
 {
-  "name": "uxp-template-ps-starter",
+  "name": "export-images-test",
   "version": "1.0.0",
-  "description": "Starter template for creating Adobe UXP based-Photoshop plugin.",
-  "author": "Adobe Inc",
-  "license": "Apache-2.0",
+  "description": "Example of UXP Plugin.",
+  "author": "Kawano Shuji",
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w"

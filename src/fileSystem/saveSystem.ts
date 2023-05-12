@@ -59,7 +59,7 @@ type JpegSaveOptionsParam = {
 };
 
 /**
- * save document as a jpeg image in directory active document is saved.
+ * save document as a jpeg image in directory where initial document was saved.
  * @param param @type {JpegSaveOptionsParam}
  * @returns {Promise<boolean>}
  */
@@ -203,7 +203,7 @@ export const mkdirWithPicker = async () => {
 };
 
 /**
- * register directory path on Panel.
+ * register directory path on panel.
  */
 export const registerDir = async () => {
     try {

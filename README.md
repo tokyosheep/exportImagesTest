@@ -37,10 +37,10 @@ then compile code through running
 npm run build
 ```
 after compiling that, start plugin through UXP devtool.
-I confirm it works on Win and Mac both OS.
+I confirmed it works on Win and Mac both OS.
 
 Environment variable "HASPROTOCOL" has boolean value.
-if it true, the string value "PROTOCOL" willl be added on head od any of file path,
+if it true, the string value "PROTOCOL" will be added on head of file path,
 and in case of false, it won't be added.
 
 Since UXP supported fs module, initially file protocol was necessary for filesystem.
@@ -53,7 +53,7 @@ if you need adptation for older versions, I recommend adding protocol.
 For now manifest version have to be 5 (probably in the future it'll be newer)
 declaring "localFileSystem", "fullAccess", allowing file access.
 Photoshop "minVersion" have to be later than "24.2".
-(I use getEntryWithUrl and createEntryWithUrl mehotd. it requires later than 24.2)
+(I use getEntryWithUrl and createEntryWithUrl method. it requires later than 24.2)
 of course if you want to use on 24.2 , environment variable "HASPROTOCOL" has to be true.
 
 see more details

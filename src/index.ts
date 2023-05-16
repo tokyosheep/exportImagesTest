@@ -1,5 +1,6 @@
 import { app } from 'photoshop';
 
+import { saveTiffOnDesktop } from './fileSystem/savetiff';
 import { DESKTOPPATH } from './fileSystem/root';
 import { saveOnActiveDocumentDir,
     saveOnDesktop,
@@ -10,6 +11,7 @@ import { saveOnActiveDocumentDir,
     registerDir,
     writeTextFile } from './fileSystem/saveSystem';
 
+const save_tiff = document.getElementById('save_tiff');
 const save_doc = document.getElementById('save_doc');
 const save_folder = document.getElementById('save_folder');
 const call_desktop = document.getElementById('call_desktop');
@@ -19,6 +21,10 @@ const save_picker = document.getElementById('save_picker');
 const mkdir_picker = document.getElementById('mkdir_picker');
 const register_directory = document.getElementById('register_directory');
 const writeText = document.getElementById('writeText');
+
+save_tiff.addEventListener('click', async () => {
+    await saveTiffOnDesktop();
+});
 
 save_folder.addEventListener('click', async () => {
     await saveActiveDocumentInFolder();

@@ -4,7 +4,7 @@ import uxp from 'uxp';
 const uxpfs = uxp.storage.localFileSystem;
 const { batchPlay } = action;
 
-const turnStringIntoEntry:(filePath:string)=>Promise<any> = async filePath => {
+export const turnStringIntoEntry:(filePath:string)=>Promise<any> = async filePath => {
   const savePath = setProtocol(filePath);
   return await uxpfs.createEntryWithUrl(savePath, { overwrite: true });
 };

@@ -5,6 +5,13 @@
 This is an exmaple of UXP Photoshop Plugin.
 UXP has its own filesystem. it's bit unique system. but for some users, It's too unique I guess.
 
+**Note**  
+May 28  
+I checked on Photoshop 24.2, and createEntryWithUrl method didn't work at all.
+so I set minimum version 24.4 on manifest.
+
+added psd save batch Play function.
+because saveAspsd method tries to save even over 2GB document as a psd.
 
 ## Node.js style filesystem and Entry object
 
@@ -55,6 +62,8 @@ declaring "localFileSystem", "fullAccess", allowing file access.
 Photoshop "minVersion" have to be later than "24.2".
 (I use getEntryWithUrl and createEntryWithUrl method. it requires later than 24.2)
 of course if you want to use on 24.2 , environment variable "HASPROTOCOL" has to be true.
+** I rewrite 24.4 on manifest **
+createEntryWithUrl method didn't work on Photoshop 24.2. therefore I set minimum version 24.4.
 
 see more details
 [document](https://developer.adobe.com/photoshop/uxp/2022/guides/uxp_guide/uxp-misc/manifest-v5/)

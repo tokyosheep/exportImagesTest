@@ -5,7 +5,7 @@
 This is an exmaple of UXP Photoshop Plugin.
 UXP has its own filesystem. it's bit unique system. but for some users, It's too unique I guess.
 
-**Note**  
+**update**  
 May 28  
 I checked on Photoshop 24.2, and createEntryWithUrl method didn't work at all.
 so I set minimum version 24.4 on manifest.
